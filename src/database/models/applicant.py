@@ -1,22 +1,25 @@
 from datetime import datetime
+from typing import TYPE_CHECKING
 
-from sqlalchemy import DateTime, String
-from sqlalchemy.orm import Mapped, mapped_column
-from sqlalchemy.dialects.postgresql import ARRAY
+from sqlalchemy import DateTime
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.database.base import Base
+from src.database.models.mixins import SchoolRelationMixin
 
 
-class Applicant(Base):
+if TYPE_CHECKING:
+    from src.database.models.personal import Personal
+
+
+class Applicant(SchoolRelationMixin, Base):
+    _school_back_populates = "applicants"
+
     full_name: Mapped[str]
     gender: Mapped[str]
     bdate: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     gpa: Mapped[float]
     score: Mapped[int]
     olympiads: Mapped[str | None] = mapped_column(nullable=True)
-    university: Mapped[list[str]] = mapped_column(ARRAY(String))
-    specialities: Mapped[list[str]] = mapped_column(ARRAY(String))
-    reception: Mapped[str]
-    order: Mapped[str | None] = mapped_column(nullable=True)
 
-    school: Mapped
+    personal: Mapped["Personal"] = relationship(back_populates="personal")
