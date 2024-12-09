@@ -1,13 +1,13 @@
 __all__ = (
     "Base",
     "School",
-    "Profile",
+    "Metric",
     "Applicant",
-    "Speciality"
+    "Direction"
 )
 
 from src.database.base import Base
 from src.database.models.school import School
-from src.database.models.metric import Profile
+from src.database.models.metric import Metric
 from src.database.models.applicant import Applicant
-from src.database.models.direction import Speciality
+from src.database.models.direction import Direction

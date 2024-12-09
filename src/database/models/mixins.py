@@ -54,7 +54,3 @@ class ApplicantRelationMixin:
             argument="Applicant",
             back_populates=cls._applicant_back_populates
         )
-
-
-class MetricRelationMixin:
-    ...
