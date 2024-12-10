@@ -10,6 +10,7 @@ from src.database.models.mixins import SchoolRelationMixin
 
 if TYPE_CHECKING:
     from src.database.models.personal import Personal
+    from src.database.models.direction import Direction
 
 
 class Applicant(SchoolRelationMixin, Base):
@@ -22,7 +23,8 @@ class Applicant(SchoolRelationMixin, Base):
     score: Mapped[int]
     olympiads: Mapped[str | None] = mapped_column(nullable=True)
 
-    personal: Mapped["Personal"] = relationship(back_populates="personal")
+    personal: Mapped["Personal"] = relationship(back_populates="applicant")
+    directions: Mapped[list["Direction"]] = relationship(back_populates="applicant")
 
     def __str__(self) -> str:
         return f"{self.__class__.__name__}(id={self.id}, full_name={self.full_name}, score={self.score}"
