@@ -23,3 +23,9 @@ class Applicant(SchoolRelationMixin, Base):
     olympiads: Mapped[str | None] = mapped_column(nullable=True)
 
     personal: Mapped["Personal"] = relationship(back_populates="personal")
+
+    def __str__(self) -> str:
+        return f"{self.__class__.__name__}(id={self.id}, full_name={self.full_name}, score={self.score}"
+
+    def __repr__(self) -> str:
+        return str(self)
