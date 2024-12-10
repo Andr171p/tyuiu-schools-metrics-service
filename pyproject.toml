@@ -12,6 +12,7 @@ sqlalchemy = "^2.0.36"
 alembic = "^1.14.0"
 aiosqlite = "^0.20.0"
 numpy = "^2.2.0"
+pandas = "^2.2.3"
 
 
 [build-system]

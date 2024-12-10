@@ -32,30 +32,30 @@ class SchoolService(DBContext):
             return schools.scalars().all()
 
     @singledispatchmethod
-    async def get_school(self, arg: Any) -> School:
+    async def get_school(self, arg: Any) -> School | None:
         raise NotImplementedError("<SchoolService> get_school not implemented")
 
     @get_school.register
-    async def _(self, id: int) -> School:
+    async def _(self, id: int) -> School | None:
         async with self.session() as session:
             stmt = select(School).where(School.id == id)
             school = await session.execute(stmt)
             return school.scalars().one()
 
     @get_school.register
-    async def _(self, name: str) -> School:
+    async def _(self, name: str) -> School | None:
         async with self.session() as session:
             stmt = select(School).where(School.name == name)
             school = await session.execute(stmt)
             return school.scalars().one()
 
-    async def get_schools_by_city(self, city: str) -> Sequence[School]:
+    async def get_schools_by_city(self, city: str) -> Sequence[School] | None:
         async with self.session() as session:
             stmt = select(School).where(School.city == city)
             schools = await session.execute(stmt)
             return schools.scalars().all()
 
-    async def get_schools_with_applicants(self) -> Sequence[School]:
+    async def get_schools_with_applicants(self) -> Sequence[School] | None:
         async with self.session() as session:
             stmt = (
                 select(School)
@@ -66,7 +66,7 @@ class SchoolService(DBContext):
             schools = await session.execute(stmt)
             return schools.scalars().all()
 
-    async def get_school_with_applicants(self, id: int) -> School:
+    async def get_school_with_applicants(self, id: int) -> School | None:
         async with self.session() as session:
             stmt = (
                 select(School)

@@ -13,14 +13,14 @@ if TYPE_CHECKING:
 class School(Base):
     name: Mapped[str]
     city: Mapped[str]
-    latitude: Mapped[float]
-    longitude: Mapped[float]
+    # latitude: Mapped[float]
+    # longitude: Mapped[float]
 
     applicants: Mapped[list["Applicant"]] = relationship(back_populates="school")
     metric: Mapped["Metric"] = relationship(back_populates="school")
 
     def __str__(self) -> str:
-        return f"{self.__class__.__name__}(id={self.id}, lat={self.latitude}, lon={self.longitude}"
+        return f"{self.__class__.__name__}(id={self.id}, name={self.name}"
 
     def __repr__(self) -> str:
         return str(self)
