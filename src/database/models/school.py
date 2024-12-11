@@ -12,7 +12,7 @@ if TYPE_CHECKING:
 
 class School(Base):
     name: Mapped[str]
-    city: Mapped[str]
+    city: Mapped[str | None] = mapped_column(nullable=True)
     # latitude: Mapped[float]
     # longitude: Mapped[float]
 

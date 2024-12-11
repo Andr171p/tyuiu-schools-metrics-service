@@ -10,10 +10,10 @@ from alembic import context
 from src.config import settings
 from src.database.base import Base
 from src.database.models.school import School
-from src.database.models.applicant import Applicant
-from src.database.models.direction import Direction
-from src.database.models.personal import Personal
 from src.database.models.metric import Metric
+from src.database.models.applicant import Applicant
+from src.database.models.personal import Personal
+from src.database.models.direction import Direction
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

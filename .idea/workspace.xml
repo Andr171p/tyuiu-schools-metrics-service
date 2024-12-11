@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 10.12.2024 process dataset">
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 10.12.2024 new migration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
@@ -12,9 +12,7 @@
       <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/2024_12_10_0111-9ed1ac58a4b0_initial_revision.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/models/direction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/direction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/2024_12_10_2007-0d8c6145ea2b_initional_migration.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/models/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/school.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,19 +39,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__init__.executor": "Run",
-    "Python.applicant.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.note.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/SchoolsMetricsService/data",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.applicant.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.note.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/SchoolsMetricsService/data&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\SchoolsMetricsService\data" />
@@ -245,7 +243,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733839567846</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[schools-metrics-service] 10.12.2024 add new tables">
+      <option name="closed" value="true" />
+      <created>1733843512269</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733843512269</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[schools-metrics-service] 10.12.2024 new migration">
+      <option name="closed" value="true" />
+      <created>1733843902854</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733843902854</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -255,6 +269,8 @@
     <MESSAGE value="[schools-metrics-service] 10.12.2024 db update models" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 db add school service" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 process dataset" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 10.12.2024 process dataset" />
+    <MESSAGE value="[schools-metrics-service] 10.12.2024 add new tables" />
+    <MESSAGE value="[schools-metrics-service] 10.12.2024 new migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 10.12.2024 new migration" />
   </component>
 </project>
