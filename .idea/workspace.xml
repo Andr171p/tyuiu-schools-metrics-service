@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 10.12.2024 new migration">
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 11.12.2024">
+      <change afterPath="$PROJECT_DIR$/src/database/services/applicant.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/2024_12_10_2007-0d8c6145ea2b_initional_migration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/models/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733843902854</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[schools-metrics-service] 11.12.2024">
+      <option name="closed" value="true" />
+      <created>1733924860637</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733924860637</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -271,6 +274,7 @@
     <MESSAGE value="[schools-metrics-service] 10.12.2024 process dataset" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 add new tables" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 new migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 10.12.2024 new migration" />
+    <MESSAGE value="[schools-metrics-service] 11.12.2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 11.12.2024" />
   </component>
 </project>

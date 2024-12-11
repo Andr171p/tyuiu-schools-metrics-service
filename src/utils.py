@@ -1,3 +1,4 @@
+from datetime import datetime
 
 
 def get_city_from_name(name: str) -> str | None:
@@ -10,3 +11,7 @@ def get_city_from_name(name: str) -> str | None:
         )
     except IndexError:
         return
+
+
+def get_date_from_str(date: str) -> datetime:
+    return datetime.strptime(date, "%d.%m.%Y")
