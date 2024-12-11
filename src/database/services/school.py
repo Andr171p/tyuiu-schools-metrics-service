@@ -77,3 +77,12 @@ class SchoolService(DBContext):
             )
             school = await session.execute(stmt)
             return school.scalars().one()
+
+    async def clear_schools(self) -> None:
+        async with self.session() as session:
+            await session.execute(School.__table__.delete())
+            await session.commit()
+
+
+'''import asyncio
+print(asyncio.run(SchoolService().get_school(1)))'''

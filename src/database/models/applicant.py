@@ -18,7 +18,7 @@ class Applicant(SchoolRelationMixin, Base):
 
     full_name: Mapped[str]
     gender: Mapped[str]
-    bdate: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    bdate: Mapped[datetime] = mapped_column(DateTime)
     gpa: Mapped[float]
     score: Mapped[int]
     olympiads: Mapped[str | None] = mapped_column(nullable=True)

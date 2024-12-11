@@ -8,6 +8,7 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine
 )
 
+from src.database.base import get_db_url
 from src.config import settings
 
 
@@ -18,7 +19,7 @@ class DBContext:
 
     def init(self) -> None:
         self._engine = create_async_engine(
-            url=settings.db.url,
+            url=get_db_url(),
             echo=settings.db.echo
         )
         self._sessionmaker = async_sessionmaker(
