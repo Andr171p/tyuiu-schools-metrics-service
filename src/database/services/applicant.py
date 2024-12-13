@@ -1,6 +1,7 @@
-from typing import Optional
+from typing import Optional, List, Dict, Any
 
 from sqlalchemy import select
+from sqlalchemy import text
 
 from src.database.context import DBContext
 from src.database.models.school import School
@@ -29,4 +30,18 @@ class ApplicantService(DBContext):
             applicant.school_id = school_id
             session.add(applicant)
             await session.flush()
-            return applicant
+        return applicant
+
+    async def add_applicants(
+            self,
+            applicants: List[Applicant]
+    ) -> List[Applicant]:
+        async with self.session() as session:
+            session.add_all(applicants)
+            await session.commit()
+            return applicants
+
+    async def truncate_applicants(self) -> None:
+        async with self.session() as session:
+            await session.execute(text("TRUNCATE TABLE applicants CASCADE   "))
+            await session.commit()

@@ -7,10 +7,10 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from alembic import context
 
-from src.database.base import get_db_url, Base
+from src.database.base import Base, get_db_url
 from src.database.models.school import School
-from src.database.models.metric import Metric
 from src.database.models.applicant import Applicant
+from src.database.models.metric import Metric
 from src.database.models.personal import Personal
 from src.database.models.direction import Direction
 

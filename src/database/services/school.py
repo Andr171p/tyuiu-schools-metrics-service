@@ -40,14 +40,14 @@ class SchoolService(DBContext):
         async with self.session() as session:
             stmt = select(School).where(School.id == id)
             school = await session.execute(stmt)
-            return school.scalars().one()
+            return school.scalar_one_or_none()
 
     @get_school.register
     async def _(self, name: str) -> School | None:
         async with self.session() as session:
             stmt = select(School).where(School.name == name)
             school = await session.execute(stmt)
-            return school.scalars().one()
+            return school.scalar_one_or_none()
 
     async def get_schools_by_city(self, city: str) -> Sequence[School] | None:
         async with self.session() as session:
@@ -78,11 +78,9 @@ class SchoolService(DBContext):
             school = await session.execute(stmt)
             return school.scalars().one()
 
-    async def clear_schools(self) -> None:
-        async with self.session() as session:
-            await session.execute(School.__table__.delete())
-            await session.commit()
+
+school_service = SchoolService()
 
 
-'''import asyncio
-print(asyncio.run(SchoolService().get_school(1)))'''
+import asyncio
+print(asyncio.run(school_service.get_schools()))
