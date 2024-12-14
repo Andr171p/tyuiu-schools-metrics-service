@@ -1,14 +1,16 @@
 from pydantic import BaseModel
-from typing import List, Literal
+from typing import List, Literal, Tuple
 
 
 class MetricSchema(BaseModel):
     applicants_count: int
     students_count: int
+    genders_count: List[Tuple[str, int]]
+    olympiads_count: int
     avg_gpa: float
     avg_score: float
-    popular_universities: List[str]
-    popular_directions: List[str]
+    top_universities: List[Tuple[str, int]]
+    top_directions: List[Tuple[str, int]]
 
 
 class GetMetricResponse(BaseModel):

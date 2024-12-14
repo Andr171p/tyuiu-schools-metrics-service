@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 14.12.2024">
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 14.12.2024 new method in applicant service">
+      <change afterPath="$PROJECT_DIR$/src/database/metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/metrics/info/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/metrics/info/schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/metrics/info/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metrics/school_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/metrics/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metrics/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/metrics/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +44,8 @@
     "Python.applicant.executor": "Run",
     "Python.direction.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.metrics (1).executor": "Run",
+    "Python.metrics.executor": "Run",
     "Python.note.executor": "Run",
     "Python.school (1).executor": "Run",
     "Python.school.executor": "Run",
@@ -53,30 +61,11 @@
       <recent name="C:\Users\andre\SchoolsMetricsService\data" />
       <recent name="C:\Users\andre\SchoolsMetricsService\src" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\SchoolsMetricsService\src\metrics\info" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.direction">
-    <configuration name="applicant" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SchoolsMetricsService" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database/services" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/services/applicant.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.metrics (1)">
     <configuration name="direction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
@@ -113,6 +102,50 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="metrics (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SchoolsMetricsService" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/metrics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SchoolsMetricsService" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/api_v1/routers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/api_v1/routers/metrics.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.metrics (1)" />
+        <item itemvalue="Python.metrics" />
         <item itemvalue="Python.direction" />
         <item itemvalue="Python.utils" />
         <item itemvalue="Python.school" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.applicant" />
       </list>
     </recent_temporary>
   </component>
@@ -303,7 +336,31 @@
       <option name="project" value="LOCAL" />
       <updated>1734168111908</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[schools-metrics-service] 14.12.2024 add routers">
+      <option name="closed" value="true" />
+      <created>1734172379152</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1734172379152</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[schools-metrics-service] 14.12.2024 ...">
+      <option name="closed" value="true" />
+      <created>1734172568830</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734172568830</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[schools-metrics-service] 14.12.2024 new method in applicant service">
+      <option name="closed" value="true" />
+      <created>1734173099965</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1734173099965</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -321,6 +378,9 @@
     <MESSAGE value="[schools-metrics-service] 13.12.2024" />
     <MESSAGE value="[schools-metrics-service] 13.12.2024 add services and metrics" />
     <MESSAGE value="[schools-metrics-service] 14.12.2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 14.12.2024" />
+    <MESSAGE value="[schools-metrics-service] 14.12.2024 add routers" />
+    <MESSAGE value="[schools-metrics-service] 14.12.2024 ..." />
+    <MESSAGE value="[schools-metrics-service] 14.12.2024 new method in applicant service" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 14.12.2024 new method in applicant service" />
   </component>
 </project>

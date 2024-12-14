@@ -1,15 +1,15 @@
-from typing import List
+from typing import List, Sequence
 from collections import Counter
 
 from src.database.models.applicant import Applicant
 from src.database.models.direction import Direction
 
 
-def get_applicants_count(applicants: List[Applicant]) -> int:
+def get_applicants_count(applicants: Sequence[Applicant]) -> int:
     return len(applicants)
 
 
-def get_students_count(directions: List[Direction]) -> int:
+def get_students_count(directions: Sequence[Direction]) -> int:
     count: int = 0
     for direction in directions:
         if direction.order is not None:
@@ -17,20 +17,20 @@ def get_students_count(directions: List[Direction]) -> int:
     return count
 
 
-def get_avg_gpa(applicants: List[Applicant]) -> float:
+def get_avg_gpa(applicants: Sequence[Applicant]) -> float:
     total_gpa: float = sum(applicant.gpa for applicant in applicants)
     avg_gpa: float = total_gpa / len(applicants) if len(applicants) > 0 else 0
     return round(avg_gpa, 3)
 
 
-def get_avg_score(applicants: List[Applicant]) -> float:
+def get_avg_score(applicants: Sequence[Applicant]) -> float:
     total_gpa: float = sum(applicant.gpa for applicant in applicants)
     avg_gpa: float = total_gpa / len(applicants) if len(applicants) > 0 else 0
     return round(avg_gpa, 3)
 
 
 def get_popular_universities(
-        directions: List[Direction],
+        directions: Sequence[Direction],
         top_n: int = 5
 ) -> List[str]:
     universities_list: List[str] = [direction.university for direction in directions]
@@ -39,7 +39,7 @@ def get_popular_universities(
 
 
 def get_popular_directions(
-        directions: List[Direction],
+        directions: Sequence[Direction],
         top_n: int = 5
 ) -> List[str]:
     directions_list: List[str] = [direction.direction for direction in directions]
