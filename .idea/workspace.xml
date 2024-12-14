@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 13.12.2024 add services and metrics">
-      <change afterPath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/metrics/school_metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/services/direction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/services/direction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metrics/school.py" beforeDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 14.12.2024">
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metrics/school_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/metrics/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +143,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="school_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,7 +156,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\andre\SchoolsMetricsService\src\metrics\school_metrics.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\andre\SchoolsMetricsService\src\metrics\utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,7 +168,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.direction" />
-        <item itemvalue="Python.school_metrics" />
+        <item itemvalue="Python.utils" />
         <item itemvalue="Python.school" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.applicant" />
@@ -302,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734093114185</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[schools-metrics-service] 14.12.2024">
+      <option name="closed" value="true" />
+      <created>1734168111908</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734168111908</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -319,6 +320,7 @@
     <MESSAGE value="[schools-metrics-service] 12.12.2024" />
     <MESSAGE value="[schools-metrics-service] 13.12.2024" />
     <MESSAGE value="[schools-metrics-service] 13.12.2024 add services and metrics" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 13.12.2024 add services and metrics" />
+    <MESSAGE value="[schools-metrics-service] 14.12.2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 14.12.2024" />
   </component>
 </project>
