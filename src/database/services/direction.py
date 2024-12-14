@@ -39,5 +39,4 @@ class DirectionService(DBContext):
             return directions.scalars().all()
 
 
-import asyncio
-print(asyncio.run(DirectionService().get_directions_by_school_id(school_id=100))[0].direction)
+direction_service = DirectionService()

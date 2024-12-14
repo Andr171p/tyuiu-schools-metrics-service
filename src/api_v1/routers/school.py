@@ -32,7 +32,7 @@ async def get_school(school_id: int) -> JSONResponse:
     )
 
 
-@school_router.get(path="/get/schools", response_model=GetSchoolsResponse)
+@school_router.get(path="/get/schools/", response_model=GetSchoolsResponse)
 async def get_schools() -> JSONResponse:
     schools = await school_service.get_schools()
     return JSONResponse(
