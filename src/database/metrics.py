@@ -121,7 +121,22 @@ class SchoolMetrics(DBContext):
                 for item in distribution.all()
             ]
 
+import asyncio
+from src.api_v1.schemas.metrics import MetricSchema
+async def main() -> None:
+    service = SchoolMetrics(100)
+    tasks = [
+        service.get_applicants_count(),
+        service.get_students_count(),
+        service.get_genders_count(),
+        service.get_olympiads_count(),
+        service.get_avg_gpa(),
+        service.get_avg_score(),
+        service.get_top_universities(),
+        service.get_top_directions()
+    ]
+    metrics = await asyncio.gather(*tasks)
+    print(MetricSchema(**dict(zip(MetricSchema.model_fields.keys(), metrics))))
 
-import inspect
 
-print(inspect.getmembers(SchoolMetrics, predicate=inspect.isfunction))
+asyncio.run(main())

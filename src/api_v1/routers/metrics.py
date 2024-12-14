@@ -1,3 +1,5 @@
+import asyncio
+
 from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import HTTPException
@@ -16,22 +18,23 @@ metrics_router = APIRouter(
 @metrics_router.get(path="/school/{school_id}/", response_model=GetMetricResponse)
 async def get_school_metrics(school_id: int) -> JSONResponse:
     service = SchoolMetrics(school_id)
-    metrics = {
-        "applicants_count": await service.get_applicants_count(),
-        "students_count": await service.get_students_count(),
-        "genders_count": await service.get_genders_count(),
-        "olympiads_count": await service.get_olympiads_count(),
-        "avg_gpa": await service.get_avg_gpa(),
-        "avg_score": await service.get_avg_score(),
-        "top_universities": await service.get_top_universities(),
-        "top_directions": await service.get_top_directions()
-    }
+    tasks = [
+        service.get_applicants_count(),
+        service.get_students_count(),
+        service.get_genders_count(),
+        service.get_olympiads_count(),
+        service.get_avg_gpa(),
+        service.get_avg_score(),
+        service.get_top_universities(),
+        service.get_top_directions()
+    ]
+    metrics = await asyncio.gather(*tasks)
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={
             "data": {
                 "status": "ok",
-                "metrics": MetricSchema(**metrics)
+                "metrics": MetricSchema(*metrics)
             }
         }
     )
