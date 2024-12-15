@@ -2,7 +2,11 @@ from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import HTTPException
 
-from src.api_v1.schemas.school import GetSchoolResponse, GetSchoolsResponse
+from src.api_v1.schemas.school import (
+    SchoolSchema,
+    GetSchoolResponse,
+    GetSchoolsResponse
+)
 from src.database.services.school import school_service
 from src.config import settings
 
@@ -26,7 +30,7 @@ async def get_school(school_id: int) -> JSONResponse:
         content={
             "data": {
                 "status": "ok",
-                "school": school
+                "school": SchoolSchema(**school.__dict__)
             }
         }
     )
