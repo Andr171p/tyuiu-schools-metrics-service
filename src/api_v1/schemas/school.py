@@ -7,6 +7,10 @@ class SchoolSchema(BaseModel):
     name: str
     city: str | None
 
+    class Config:
+        orm_mode = True
+        from_attributes = True
+
 
 class SchoolContent(BaseModel):
     status: Literal["ok"] = "ok"
