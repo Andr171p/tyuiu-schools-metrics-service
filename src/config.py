@@ -24,8 +24,13 @@ class PostgreSQLSettings(BaseSettings):
     password: str = os.getenv("DB_PASSWORD")
 
 
-class DbSettings(BaseSettings):
+class DBSettings(BaseSettings):
     echo: bool = True
+
+
+class ElasticSearchSettings(BaseSettings):
+    host: str = os.getenv("ES_HOST")
+    port: int = os.getenv("ES_PORT")
 
 
 class APISettings(BaseSettings):
@@ -37,7 +42,8 @@ class Settings(BaseSettings):
     api: APISettings = APISettings()
     sqlite: SQLiteSettings = SQLiteSettings()
     postgres: PostgreSQLSettings = PostgreSQLSettings()
-    db: DbSettings = DbSettings()
+    db: DBSettings = DBSettings()
+    es: ElasticSearchSettings = ElasticSearchSettings()
 
 
 settings = Settings()
