@@ -30,7 +30,7 @@ async def get_school(school_id: int) -> JSONResponse:
         content={
             "data": {
                 "status": "ok",
-                "school": SchoolSchema(**school.__dict__)
+                "school": SchoolSchema(**school.__dict__).model_dump()
             }
         }
     )
