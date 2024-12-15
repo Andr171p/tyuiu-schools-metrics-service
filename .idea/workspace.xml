@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 15.12.2024 fix router">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 15.12.2024 add config to school schema">
       <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/school.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -430,12 +426,26 @@
       <option name="project" value="LOCAL" />
       <updated>1734267426643</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="[schools-metrics-service] 15.12.2024 fix errors in routers">
+      <option name="closed" value="true" />
+      <created>1734268009591</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1734268009591</updated>
+    </task>
+    <task id="LOCAL-00028" summary="[schools-metrics-service] 15.12.2024 add config to school schema">
+      <option name="closed" value="true" />
+      <created>1734268255044</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1734268255044</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 09.12.2024 creating models" />
-    <MESSAGE value="[schools-metrics-service] 10.12.2024 db models + migrations" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 db update models" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 db add school service" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 process dataset" />
@@ -459,6 +469,8 @@
     <MESSAGE value="[schools-metrics-service] 15.12.2024 update schemas" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 new alembic" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 fix router" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 15.12.2024 fix router" />
+    <MESSAGE value="[schools-metrics-service] 15.12.2024 fix errors in routers" />
+    <MESSAGE value="[schools-metrics-service] 15.12.2024 add config to school schema" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 15.12.2024 add config to school schema" />
   </component>
 </project>
