@@ -8,11 +8,19 @@ class SchoolSchema(BaseModel):
     city: str | None
 
 
-class GetSchoolResponse(BaseModel):
+class SchoolResponse(BaseModel):
     status: Literal["ok"] = "ok"
     school: SchoolSchema
 
 
-class GetSchoolsResponse(BaseModel):
+class SchoolsResponse(BaseModel):
     status: Literal["ok"] = "ok"
     schools: List[SchoolSchema]
+
+
+class GetSchoolResponse(BaseModel):
+    data: SchoolResponse
+
+
+class GetSchoolsResponse(BaseModel):
+    data: SchoolsResponse
