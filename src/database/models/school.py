@@ -1,5 +1,6 @@
 from typing import TYPE_CHECKING
 
+from sqlalchemy import Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.database.base import Base
@@ -11,7 +12,7 @@ if TYPE_CHECKING:
 
 
 class School(Base):
-    name: Mapped[str]
+    name: Mapped[str] = mapped_column(Text)
     city: Mapped[str | None] = mapped_column(nullable=True)
     # latitude: Mapped[float]
     # longitude: Mapped[float]

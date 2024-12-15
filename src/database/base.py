@@ -14,7 +14,8 @@ def get_db_url(
         port: int = settings.postgres.port,
         database: str = settings.postgres.database
 ) -> str:
-    return f"postgresql+asyncpg://{user}:{password}@{host}:{port}/{database}"
+    # return f"postgresql+asyncpg://{user}:{password}@{host}:{port}/{database}"
+    return "postgresql+asyncpg://postgres:QHRtShtDteiREqpbSHWTDwcoZtFMwSSn@junction.proxy.rlwy.net:36175/railway"
 
 
 class Base(AsyncAttrs, DeclarativeBase):
