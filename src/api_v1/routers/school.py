@@ -3,17 +3,17 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import HTTPException
 
 from src.api_v1.schemas.school import GetSchoolResponse, GetSchoolsResponse
-
 from src.database.services.school import school_service
+from src.config import settings
 
 
 school_router = APIRouter(
-    prefix="/schools",
+    prefix=f"{settings.api.api_v1_prefix}/schools",
     tags=["Schools"]
 )
 
 
-@school_router.get(path="/get/school/{school_id}/", response_model=GetSchoolResponse)
+@school_router.get(path="/get/schools/{school_id}/", response_model=GetSchoolResponse)
 async def get_school(school_id: int) -> JSONResponse:
     school = await school_service.get_school(school_id)
     if school is None:

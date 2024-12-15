@@ -29,6 +29,7 @@ class DbSettings(BaseSettings):
 
 
 class APISettings(BaseSettings):
+    name: str = "tyuiu.metrics"
     api_v1_prefix: str = "/api/v1"
 
 

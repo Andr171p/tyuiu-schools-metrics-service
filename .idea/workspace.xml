@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 14.12.2024 new method in applicant service">
-      <change afterPath="$PROJECT_DIR$/src/database/metrics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/metrics/info/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/metrics/info/schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/metrics/info/school.py" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 15.12.2024 speed up metrics">
+      <change afterPath="$PROJECT_DIR$/src/database/metrics/school.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metrics/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/metrics/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metrics/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metrics/info/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/lifespan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metrics/info/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/metrics/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metrics/info/school.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metrics/utils.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +367,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734173099965</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="[schools-metrics-service] 15.12.2024">
+      <option name="closed" value="true" />
+      <created>1734216768633</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1734216768633</updated>
+    </task>
+    <task id="LOCAL-00019" summary="[schools-metrics-service] 15.12.2024 speed up metrics">
+      <option name="closed" value="true" />
+      <created>1734217339937</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1734217339937</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -381,6 +404,8 @@
     <MESSAGE value="[schools-metrics-service] 14.12.2024 add routers" />
     <MESSAGE value="[schools-metrics-service] 14.12.2024 ..." />
     <MESSAGE value="[schools-metrics-service] 14.12.2024 new method in applicant service" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 14.12.2024 new method in applicant service" />
+    <MESSAGE value="[schools-metrics-service] 15.12.2024" />
+    <MESSAGE value="[schools-metrics-service] 15.12.2024 speed up metrics" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 15.12.2024 speed up metrics" />
   </component>
 </project>
