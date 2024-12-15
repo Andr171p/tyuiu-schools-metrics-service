@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import HTTPException
 
 from src.database.metrics.school import SchoolMetrics
-from src.api_v1.schemas.metrics import MetricSchema, GetMetricResponse
+from src.api_v1.schemas.metrics import MetricSchema, MetricResponse
 from src.config import settings
 
 
@@ -13,7 +13,7 @@ metrics_router = APIRouter(
 )
 
 
-@metrics_router.get(path="/school/{school_id}/", response_model=GetMetricResponse)
+@metrics_router.get(path="/school/{school_id}/", response_model=MetricResponse)
 async def get_school_metrics(school_id: int) -> JSONResponse:
     service = SchoolMetrics(school_id)
     metrics = await service.get_metrics()
@@ -24,7 +24,7 @@ async def get_school_metrics(school_id: int) -> JSONResponse:
                 "status": "ok",
                 "metrics": MetricSchema(
                     **dict(zip(MetricSchema.model_fields.keys(), metrics))
-                )
+                ).model_dump()
             }
         }
     )

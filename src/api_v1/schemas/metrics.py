@@ -13,6 +13,10 @@ class MetricSchema(BaseModel):
     top_directions: List[Tuple[str, int]]
 
 
-class GetMetricResponse(BaseModel):
+class MetricContent(BaseModel):
     status: Literal["ok"] = "ok"
     metrics: MetricSchema
+
+
+class MetricResponse(BaseModel):
+    data: MetricContent

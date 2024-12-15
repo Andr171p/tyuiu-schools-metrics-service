@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 15.12.2024 new db">
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 15.12.2024 fix router">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/school.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,11 +398,42 @@
       <option name="project" value="LOCAL" />
       <updated>1734266251971</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="[schools-metrics-service] 15.12.2024 fix schema">
+      <option name="closed" value="true" />
+      <created>1734266914761</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1734266914761</updated>
+    </task>
+    <task id="LOCAL-00024" summary="[schools-metrics-service] 15.12.2024 update schemas">
+      <option name="closed" value="true" />
+      <created>1734267122842</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1734267122842</updated>
+    </task>
+    <task id="LOCAL-00025" summary="[schools-metrics-service] 15.12.2024 new alembic">
+      <option name="closed" value="true" />
+      <created>1734267152418</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1734267152418</updated>
+    </task>
+    <task id="LOCAL-00026" summary="[schools-metrics-service] 15.12.2024 fix router">
+      <option name="closed" value="true" />
+      <created>1734267426643</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1734267426643</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 09.12.2024" />
     <MESSAGE value="[schools-metrics-service] 09.12.2024 creating models" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 db models + migrations" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 db update models" />
@@ -421,6 +455,10 @@
     <MESSAGE value="[schools-metrics-service] 15.12.2024 production v1" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 production fix requirements" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 new db" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 15.12.2024 new db" />
+    <MESSAGE value="[schools-metrics-service] 15.12.2024 fix schema" />
+    <MESSAGE value="[schools-metrics-service] 15.12.2024 update schemas" />
+    <MESSAGE value="[schools-metrics-service] 15.12.2024 new alembic" />
+    <MESSAGE value="[schools-metrics-service] 15.12.2024 fix router" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 15.12.2024 fix router" />
   </component>
 </project>

@@ -39,12 +39,13 @@ async def get_school(school_id: int) -> JSONResponse:
 @school_router.get(path="/get/schools/", response_model=GetSchoolsResponse)
 async def get_schools() -> JSONResponse:
     schools = await school_service.get_schools()
+    schools_schemas = [SchoolSchema.from_orm(school) for school in schools]
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={
             "data": {
                 "status": "ok",
-                "schools": schools
+                "schools": schools_schemas
             }
         }
     )
