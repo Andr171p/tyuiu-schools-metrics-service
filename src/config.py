@@ -28,9 +28,14 @@ class DBSettings(BaseSettings):
     echo: bool = True
 
 
-class ElasticSearchSettings(BaseSettings):
+class ESSettings(BaseSettings):
+    user: str = os.getenv("ES_USER")
+    password: str = os.getenv("ES_PASSWORD")
     host: str = os.getenv("ES_HOST")
     port: int = os.getenv("ES_PORT")
+    # url: str = f"https://{user}:{password}@{host}:{port}/"
+    url: str = "https://elasticsearch-production-eeff.up.railway.app/"
+    index: str = "schools"
 
 
 class APISettings(BaseSettings):
@@ -43,7 +48,7 @@ class Settings(BaseSettings):
     sqlite: SQLiteSettings = SQLiteSettings()
     postgres: PostgreSQLSettings = PostgreSQLSettings()
     db: DBSettings = DBSettings()
-    es: ElasticSearchSettings = ElasticSearchSettings()
+    es: ESSettings = ESSettings()
 
 
 settings = Settings()
