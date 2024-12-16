@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 15.12.2024 +">
-      <change afterPath="$PROJECT_DIR$/src/search_system/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search_system/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search_system/options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 16.12.2024 add schools search system">
+      <change afterPath="$PROJECT_DIR$/src/api_v1/middlewares/globals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api_v1/schemas/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/lifespan.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/lifespan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/school.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +41,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.__init__.executor": "Run",
+    "Python.app.executor": "Run",
     "Python.applicant.executor": "Run",
     "Python.base.executor": "Run",
+    "Python.client.executor": "Run",
     "Python.direction.executor": "Run",
+    "Python.loader.executor": "Run",
     "Python.main.executor": "Run",
     "Python.metrics (1).executor": "Run",
     "Python.metrics.executor": "Run",
@@ -50,6 +54,8 @@
     "Python.options.executor": "Run",
     "Python.school (1).executor": "Run",
     "Python.school.executor": "Run",
+    "Python.service.executor": "Run",
+    "Python.sotka.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -66,8 +72,8 @@
       <recent name="C:\Users\andre\SchoolsMetricsService\src\metrics\info" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.options">
-    <configuration name="base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,11 +82,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/api_v1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/base.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/api_v1/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -89,7 +95,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="metrics (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,11 +104,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/search" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/metrics.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/search/client.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +117,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="loader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,33 +126,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/api_v1/routers" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/search" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/api_v1/routers/metrics.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="options" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SchoolsMetricsService" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/search_system" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/search_system/options.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/search/loader.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -177,7 +161,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SchoolsMetricsService" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/search" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/search/service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sotka" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,7 +196,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sotka.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -201,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.options" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.base" />
-        <item itemvalue="Python.metrics (1)" />
-        <item itemvalue="Python.metrics" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.service" />
+        <item itemvalue="Python.loader" />
+        <item itemvalue="Python.client" />
+        <item itemvalue="Python.sotka" />
       </list>
     </recent_temporary>
   </component>
@@ -465,12 +471,26 @@
       <option name="project" value="LOCAL" />
       <updated>1734268809576</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="[schools-metrics-service] 16.12.2024 elasticsearch">
+      <option name="closed" value="true" />
+      <created>1734304076588</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1734304076588</updated>
+    </task>
+    <task id="LOCAL-00032" summary="[schools-metrics-service] 16.12.2024 add schools search system">
+      <option name="closed" value="true" />
+      <created>1734356756345</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1734356756345</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 10.12.2024 process dataset" />
-    <MESSAGE value="[schools-metrics-service] 10.12.2024 add new tables" />
     <MESSAGE value="[schools-metrics-service] 10.12.2024 new migration" />
     <MESSAGE value="[schools-metrics-service] 11.12.2024" />
     <MESSAGE value="[schools-metrics-service] 11.12.2024 add applicant service" />
@@ -494,6 +514,8 @@
     <MESSAGE value="[schools-metrics-service] 15.12.2024 add config to school schema" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 add json encoders" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 +" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 15.12.2024 +" />
+    <MESSAGE value="[schools-metrics-service] 16.12.2024 elasticsearch" />
+    <MESSAGE value="[schools-metrics-service] 16.12.2024 add schools search system" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 16.12.2024 add schools search system" />
   </component>
 </project>

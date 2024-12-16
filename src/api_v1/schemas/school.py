@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Literal, List
+from typing import Literal, List, Optional
 
 
 class SchoolSchema(BaseModel):
@@ -20,6 +20,11 @@ class SchoolContent(BaseModel):
 
 class SchoolsContent(BaseModel):
     status: Literal["ok"] = "ok"
+    schools: List[Optional[SchoolSchema]]
+
+
+class SearchSchoolsContent(BaseModel):
+    status: Literal["ok"] = "ok"
     schools: List[SchoolSchema]
 
 
@@ -29,3 +34,7 @@ class GetSchoolResponse(BaseModel):
 
 class GetSchoolsResponse(BaseModel):
     data: SchoolsContent
+
+
+class SearchSchoolsResponse(BaseModel):
+    data: SearchSchoolsContent

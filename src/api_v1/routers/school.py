@@ -1,14 +1,16 @@
-from fastapi import APIRouter, status
+from fastapi import APIRouter, Query, status
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import HTTPException
 
+from src.config import settings
+from src.database.services.school import school_service
+from src.api_v1.middlewares.globals import g
 from src.api_v1.schemas.school import (
     SchoolSchema,
     GetSchoolResponse,
-    GetSchoolsResponse
+    GetSchoolsResponse,
+    SearchSchoolsResponse
 )
-from src.database.services.school import school_service
-from src.config import settings
 
 
 school_router = APIRouter(
@@ -46,6 +48,21 @@ async def get_schools() -> JSONResponse:
             "data": {
                 "status": "ok",
                 "schools": schools_schemas
+            }
+        }
+    )
+
+
+@school_router.get(path="/search/", response_model=SearchSchoolsResponse)
+async def search_schools(q: str = Query(...)) -> JSONResponse:
+    search_service = g.search_service
+    schools = await search_service.search(q)
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content={
+            "data": {
+                "status": "ok",
+                "schools": schools
             }
         }
     )
