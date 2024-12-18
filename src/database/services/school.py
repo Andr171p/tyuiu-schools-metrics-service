@@ -80,4 +80,3 @@ class SchoolService(DBContext):
 
 
 school_service = SchoolService()
-
