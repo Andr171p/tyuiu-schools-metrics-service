@@ -6,8 +6,8 @@ from src.database.context import DBContext
 from src.database.models import School, Applicant, Direction
 
 from src.analytics.schemas.schools import (
-    TopSchool,
-    TopSchoolByScore
+    TopCountSchool,
+    TopScoreSchool
 )
 
 
@@ -16,10 +16,10 @@ class Analytics(DBContext):
         super().__init__()
         self.init()
 
-    async def get_top_schools(
+    async def get_top_schools_by_count(
             self,
             top_n: int = 5
-    ) -> List[TopSchool]:
+    ) -> List[TopCountSchool]:
         async with self.session() as session:
             stmt = (
                 select(School.id, School.name, func.count(Applicant.school_id).label("count"))
@@ -30,7 +30,7 @@ class Analytics(DBContext):
             )
             schools = await session.execute(stmt)
             return [
-                TopSchool(id=id, name=name, count=count)
+                TopCountSchool(id=id, name=name, count=count)
                 for id, name, count in schools.all()
             ]
 
@@ -38,7 +38,7 @@ class Analytics(DBContext):
             self,
             top_n: int = 5,
             count: int = 20,
-    ) -> List[TopSchoolByScore]:
+    ) -> List[TopScoreSchool]:
         async with self.session() as session:
             stmt = (
                 select(
@@ -55,6 +55,6 @@ class Analytics(DBContext):
             )
             schools = await session.execute(stmt)
             return [
-                TopSchoolByScore(id=id, name=name, score=score, count=count)
+                TopScoreSchool(id=id, name=name, score=score, count=count)
                 for id, name, score, count in schools.all()
             ]

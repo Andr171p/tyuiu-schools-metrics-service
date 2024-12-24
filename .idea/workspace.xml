@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 18.12.2024">
-      <change afterPath="$PROJECT_DIR$/src/analytics/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics/schemas/schools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/analytics/schools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/analytics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/metrics/direction.py" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 24.12.2024 add analytics service module">
+      <change afterPath="$PROJECT_DIR$/src/api_v1/middlewares/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api_v1/routers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api_v1/schemas/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics/schemas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics/schemas/schools.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics/schemas/schools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics/schools.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics/schools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/metrics.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/analytics.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/analytics.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -499,11 +505,18 @@
       <option name="project" value="LOCAL" />
       <updated>1734531539407</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="[schools-metrics-service] 24.12.2024 add analytics service module">
+      <option name="closed" value="true" />
+      <created>1735054584803</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1735054584804</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 13.12.2024" />
     <MESSAGE value="[schools-metrics-service] 13.12.2024 add services and metrics" />
     <MESSAGE value="[schools-metrics-service] 14.12.2024" />
     <MESSAGE value="[schools-metrics-service] 14.12.2024 add routers" />
@@ -528,6 +541,7 @@
     <MESSAGE value="[schools-metrics-service] 16.12.2024 production v1 + search sys" />
     <MESSAGE value="[schools-metrics-service] 16.12.2024 production v1 fix reqs" />
     <MESSAGE value="[schools-metrics-service] 18.12.2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 18.12.2024" />
+    <MESSAGE value="[schools-metrics-service] 24.12.2024 add analytics service module" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 24.12.2024 add analytics service module" />
   </component>
 </project>

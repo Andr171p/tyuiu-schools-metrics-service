@@ -1,13 +1,13 @@
 from pydantic import BaseModel
 
 
-class TopSchool(BaseModel):
+class TopCountSchool(BaseModel):
     id: int
     name: str
     count: int
 
 
-class TopSchoolByScore(BaseModel):
+class TopScoreSchool(BaseModel):
     id: int
     name: str
     score: float

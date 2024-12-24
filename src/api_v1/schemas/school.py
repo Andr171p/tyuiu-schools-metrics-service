@@ -1,5 +1,11 @@
-from pydantic import BaseModel
 from typing import Literal, List, Optional
+
+from pydantic import BaseModel
+
+from src.analytics.schemas import (
+    TopCountSchool,
+    TopScoreSchool
+)
 
 
 class SchoolSchema(BaseModel):
@@ -28,6 +34,16 @@ class SearchSchoolsContent(BaseModel):
     schools: List[SchoolSchema]
 
 
+class TopCountSchoolsContent(BaseModel):
+    status: Literal["ok"] = "ok"
+    schools: List[TopCountSchool]
+
+
+class TopScoreSchoolsContent(BaseModel):
+    status: Literal["ok"] = "ok"
+    schools: List[TopScoreSchool]
+
+
 class GetSchoolResponse(BaseModel):
     data: SchoolContent
 
@@ -38,3 +54,11 @@ class GetSchoolsResponse(BaseModel):
 
 class SearchSchoolsResponse(BaseModel):
     data: SearchSchoolsContent
+
+
+class TopCountSchoolsResponse(BaseModel):
+    data: TopCountSchoolsContent
+
+
+class TopScoreSchoolsResponse(BaseModel):
+    data: TopScoreSchoolsContent

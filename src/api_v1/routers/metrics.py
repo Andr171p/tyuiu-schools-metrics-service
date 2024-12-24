@@ -13,7 +13,7 @@ metrics_router = APIRouter(
 )
 
 
-@metrics_router.get(path="/school/{school_id}/", response_model=MetricResponse)
+@metrics_router.get(path="/schools/{school_id}/", response_model=MetricResponse)
 async def get_school_metrics(school_id: int) -> JSONResponse:
     service = SchoolMetrics(school_id)
     metrics = await service.get_metrics()
