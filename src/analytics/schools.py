@@ -7,7 +7,8 @@ from src.database.models import School, Applicant, Direction
 
 from src.analytics.schemas.schools import (
     TopCountSchool,
-    TopScoreSchool
+    TopScoreSchool,
+    TopGPASchool
 )
 
 
@@ -57,4 +58,29 @@ class SchoolsAnalytics(DBContext):
             return [
                 TopScoreSchool(id=id, name=name, score=score, count=count)
                 for id, name, score, count in schools.all()
+            ]
+
+    async def get_top_schools_by_gpa(
+            self,
+            top_n: int = 5,
+            count: int = 20
+    ) -> List[TopGPASchool]:
+        async with self.session() as session:
+            stmt = (
+                select(
+                    School.id,
+                    School.name,
+                    func.avg(Applicant.gpa).label("avg_gpa"),
+                    func.count(Applicant.school_id).label("applicants_count")
+                )
+                .join(Applicant, Applicant.school_id == School.id)
+                .group_by(School.id, School.name)
+                .having(func.count(Applicant.school_id) > count)
+                .order_by(func.avg(Applicant.gpa).desc())
+                .limit(top_n)
+            )
+            schools = await session.execute(stmt)
+            return [
+                TopGPASchool(id=id, name=name, gpa=gpa, count=count)
+                for id, name, gpa, count in schools.all()
             ]

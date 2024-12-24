@@ -12,3 +12,10 @@ class TopScoreSchool(BaseModel):
     name: str
     score: float
     count: int
+
+
+class TopGPASchool(BaseModel):
+    id: int
+    name: str
+    gpa: float
+    count: int

@@ -100,3 +100,21 @@ async def get_top_schools_by_score(top_n: int = 5) -> JSONResponse:
             }
         }
     )
+
+
+@school_router.get(path="/top/gpa/{top_n}", response_model=schemas.TopGPASchoolsResponse)
+async def get_top_schools_by_gpa(top_n: int) -> JSONResponse:
+    schools_analytics = SchoolsAnalytics()
+    schools = await schools_analytics.get_top_schools_by_gpa(top_n)
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content={
+            "data": {
+                "status": "ok",
+                "schools": [
+                    school.model_dump()
+                    for school in schools
+                ]
+            }
+        }
+    )
