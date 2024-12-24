@@ -1,3 +1,4 @@
+accessify~=0.3.1
 aiohttp~=3.11.10
 fastapi~=0.115.6
 pydantic~=2.10.3
