@@ -67,7 +67,7 @@ async def search_schools(q: str = Query(...)) -> JSONResponse:
 
 
 @school_router.get(path="/top/count/{top_n}/", response_model=schemas.TopCountSchoolsResponse)
-async def get_top_schools_by_applicants_count(top_n: int = 5) -> JSONResponse:
+async def get_top_schools_by_applicants_count(top_n: int) -> JSONResponse:
     schools_analytics = SchoolsAnalytics()
     schools = await schools_analytics.get_top_schools_by_count(top_n)
     return JSONResponse(
@@ -85,7 +85,7 @@ async def get_top_schools_by_applicants_count(top_n: int = 5) -> JSONResponse:
 
 
 @school_router.get(path="/top/score/{top_n}/", response_model=schemas.TopScoreSchoolsResponse)
-async def get_top_schools_by_score(top_n: int = 5) -> JSONResponse:
+async def get_top_schools_by_score(top_n: int) -> JSONResponse:
     schools_analytics = SchoolsAnalytics()
     schools = await schools_analytics.get_top_schools_by_score(top_n)
     return JSONResponse(
@@ -106,6 +106,24 @@ async def get_top_schools_by_score(top_n: int = 5) -> JSONResponse:
 async def get_top_schools_by_gpa(top_n: int) -> JSONResponse:
     schools_analytics = SchoolsAnalytics()
     schools = await schools_analytics.get_top_schools_by_gpa(top_n)
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content={
+            "data": {
+                "status": "ok",
+                "schools": [
+                    school.model_dump()
+                    for school in schools
+                ]
+            }
+        }
+    )
+
+
+@school_router.get(path="/top/students/{top_n}/", response_model=schemas.TopStudentsSchoolsResponse)
+async def get_top_schools_by_students(top_n: int) -> JSONResponse:
+    schools_analytics = SchoolsAnalytics()
+    schools = await schools_analytics.get_top_schools_by_students(top_n)
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={

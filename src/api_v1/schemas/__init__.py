@@ -4,7 +4,8 @@ __all__ = (
     "SearchSchoolsResponse",
     "TopCountSchoolsResponse",
     "TopScoreSchoolsResponse",
-    "TopGPASchoolsResponse"
+    "TopGPASchoolsResponse",
+    "TopStudentsSchoolsResponse"
 )
 
 from src.api_v1.schemas.school import (
@@ -13,5 +14,6 @@ from src.api_v1.schemas.school import (
     SearchSchoolsResponse,
     TopCountSchoolsResponse,
     TopScoreSchoolsResponse,
-    TopGPASchoolsResponse
+    TopGPASchoolsResponse,
+    TopStudentsSchoolsResponse
 )

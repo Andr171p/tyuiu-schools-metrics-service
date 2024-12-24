@@ -1,11 +1,13 @@
 __all__ = (
     "TopCountSchool",
     "TopScoreSchool",
-    "TopGPASchool"
+    "TopGPASchool",
+    "TopStudentsSchool"
 )
 
 from src.analytics.schemas.schools import (
     TopCountSchool,
     TopScoreSchool,
-    TopGPASchool
+    TopGPASchool,
+    TopStudentsSchool
 )

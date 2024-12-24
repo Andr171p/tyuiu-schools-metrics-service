@@ -5,7 +5,8 @@ from pydantic import BaseModel
 from src.analytics.schemas import (
     TopCountSchool,
     TopScoreSchool,
-    TopGPASchool
+    TopGPASchool,
+    TopStudentsSchool
 )
 
 
@@ -50,6 +51,11 @@ class TopGPASchoolsContent(BaseModel):
     schools: List[TopGPASchool]
 
 
+class TopStudentsSchoolsContent(BaseModel):
+    status: Literal["ok"] = "ok"
+    schools: List[TopStudentsSchool]
+
+
 class GetSchoolResponse(BaseModel):
     data: SchoolContent
 
@@ -72,3 +78,7 @@ class TopScoreSchoolsResponse(BaseModel):
 
 class TopGPASchoolsResponse(BaseModel):
     data: TopGPASchoolsContent
+
+
+class TopStudentsSchoolsResponse(BaseModel):
+    data: TopStudentsSchoolsContent
