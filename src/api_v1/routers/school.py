@@ -84,7 +84,7 @@ async def get_top_schools_by_applicants_count(top_n: int = 5) -> JSONResponse:
 @school_router.get(path="/top/score/{top_n}/", response_model=schemas.TopScoreSchoolsResponse)
 async def get_top_schools_by_score(top_n: int = 5) -> JSONResponse:
     schools_analytics = SchoolsAnalytics()
-    schools = schools_analytics.get_top_schools_by_score(top_n)
+    schools = await schools_analytics.get_top_schools_by_score(top_n)
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={
