@@ -20,7 +20,7 @@ school_router = APIRouter(
 
 
 @school_router.get(path="/get/schools/{school_id}/", response_model=GetSchoolResponse)
-async def get_school(school_id: int) -> JSONResponse:
+async def get_school_by_id(school_id: int) -> JSONResponse:
     school = await school_service.get_school(school_id)
     if school is None:
         raise HTTPException(
