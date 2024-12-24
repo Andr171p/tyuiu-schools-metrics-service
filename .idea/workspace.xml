@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 add analytics service module" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 fix school router">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -506,12 +509,26 @@
       <option name="project" value="LOCAL" />
       <updated>1735077821480</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="[schools-metrics-service] 25.12.2024 fix req.txt">
+      <option name="closed" value="true" />
+      <created>1735078188329</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1735078188329</updated>
+    </task>
+    <task id="LOCAL-00040" summary="[schools-metrics-service] 25.12.2024 fix school router">
+      <option name="closed" value="true" />
+      <created>1735078499621</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1735078499621</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 14.12.2024" />
-    <MESSAGE value="[schools-metrics-service] 14.12.2024 add routers" />
     <MESSAGE value="[schools-metrics-service] 14.12.2024 ..." />
     <MESSAGE value="[schools-metrics-service] 14.12.2024 new method in applicant service" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024" />
@@ -535,6 +552,8 @@
     <MESSAGE value="[schools-metrics-service] 18.12.2024" />
     <MESSAGE value="[schools-metrics-service] 24.12.2024 add analytics service module" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 add analytics service module" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 add analytics service module" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 fix req.txt" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 fix school router" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 fix school router" />
   </component>
 </project>

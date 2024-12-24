@@ -4,7 +4,7 @@ from fastapi.exceptions import HTTPException
 
 from src.config import settings
 from src.database.services.school import school_service
-from src.analytics.schemas import TopCountSchool, TopScoreSchool
+# from src.analytics.schemas import TopCountSchool, TopScoreSchool
 from src.analytics import SchoolsAnalytics
 from src.api_v1.middlewares.globals import g
 from src.api_v1.schemas.school import SchoolSchema
@@ -75,7 +75,10 @@ async def get_top_schools_by_applicants_count(top_n: int = 5) -> JSONResponse:
         content={
             "data": {
                 "status": "ok",
-                "schools": schools
+                "schools": [
+                    school.model_dump()
+                    for school in schools
+                ]
             }
         }
     )
@@ -90,7 +93,10 @@ async def get_top_schools_by_score(top_n: int = 5) -> JSONResponse:
         content={
             "data": {
                 "status": "ok",
-                "schools": schools
+                "schools": [
+                    school.model_dump()
+                    for school in schools
+                ]
             }
         }
     )
