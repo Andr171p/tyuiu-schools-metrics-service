@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1 add get query">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1 fix response">
+      <change afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/encoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/funcs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,22 +208,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733749588252</updated>
-    </task>
-    <task id="LOCAL-00001" summary="[schools-metrics-service] 09.12.2024">
-      <option name="closed" value="true" />
-      <created>1733750006058</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1733750006058</updated>
-    </task>
-    <task id="LOCAL-00002" summary="[schools-metrics-service] 09.12.2024 creating models">
-      <option name="closed" value="true" />
-      <created>1733754688638</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1733754688638</updated>
     </task>
     <task id="LOCAL-00003" summary="[schools-metrics-service] 10.12.2024 db models + migrations">
       <option name="closed" value="true" />
@@ -598,12 +585,26 @@
       <option name="project" value="LOCAL" />
       <updated>1735089073363</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 fiw typing error">
+      <option name="closed" value="true" />
+      <created>1735089478214</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1735089478214</updated>
+    </task>
+    <task id="LOCAL-00051" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 fix response">
+      <option name="closed" value="true" />
+      <created>1735089605996</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1735089605996</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 new alembic" />
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 fix router" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 fix errors in routers" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 add config to school schema" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 add json encoders" />
@@ -627,6 +628,8 @@
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 init applicant router" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix syntax error" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 add get query" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1 add get query" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 fiw typing error" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix response" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix response" />
   </component>
 </project>

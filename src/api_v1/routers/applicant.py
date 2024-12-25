@@ -25,13 +25,14 @@ async def get_applicant_by_id(applicant_id: int) -> JSONResponse:
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Applicant with ID {applicant_id} not found"
         )
-    applicant_json = json.loads(json.dumps(applicant.__dict__, cls=DatetimeJsonEncoder))
+    # applicant_json = json.loads(json.dumps(applicant.__dict__, cls=DatetimeJsonEncoder))
+    applicant.bdate = applicant.bdate.isoformat()
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={
             "data": {
                 "status": "ok",
-                "applicant": ApplicantSchema(**applicant_json).model_dump()
+                "applicant": ApplicantSchema(**applicant.__dict__).model_dump()
             }
         }
     )
