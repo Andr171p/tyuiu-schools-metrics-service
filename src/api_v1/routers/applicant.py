@@ -1,11 +1,8 @@
-import json
-
 from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import HTTPException
 
 from src.config import settings
-from src.utils.encoder import DatetimeJsonEncoder
 from src.database.services.applicant import applicant_service
 from src.api_v1.schemas.applicant import ApplicantSchema, ApplicantResponse, ApplicantsResponse
 from src.api_v1.schemas.direction import DirectionSchema, DirectionsResponse
@@ -25,8 +22,6 @@ async def get_applicant_by_id(applicant_id: int) -> JSONResponse:
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Applicant with ID {applicant_id} not found"
         )
-    # applicant_json = json.loads(json.dumps(applicant.__dict__, cls=DatetimeJsonEncoder))
-    applicant.bdate = str(applicant.bdate)
     return JSONResponse(
         status_code=status.HTTP_200_OK,
         content={

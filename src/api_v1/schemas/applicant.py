@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Literal, List
 
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 
 class ApplicantSchema(BaseModel):
@@ -17,6 +17,12 @@ class ApplicantSchema(BaseModel):
         orm_mode = True
         from_attributes = True
         json_encoders = {}
+
+    @field_validator('bdate')
+    def validate_bdate(cls, value: datetime | str) -> str:
+        if isinstance(value, datetime):
+            return value.isoformat()
+        return value
 
 
 class ApplicantContent(BaseModel):
