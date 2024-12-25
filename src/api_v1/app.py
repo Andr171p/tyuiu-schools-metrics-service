@@ -2,8 +2,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.api_v1.lifespan import lifespan
-from src.api_v1.routers.school import school_router
-from src.api_v1.routers.metrics import metrics_router
+from src.api_v1.routers import (
+    applicant_router,
+    school_router,
+    metrics_router
+)
 from src.config import settings
 
 
@@ -22,3 +25,4 @@ app.add_middleware(
 
 app.include_router(school_router)
 app.include_router(metrics_router)
+app.include_router(applicant_router)
