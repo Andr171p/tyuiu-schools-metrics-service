@@ -1,6 +1,7 @@
 from typing import Sequence, List, Optional
 
 from sqlalchemy import select
+from sqlalchemy.orm import joinedload
 
 from src.database.context import DBContext
 from src.database.models.school import School
@@ -51,3 +52,19 @@ class ApplicantService(DBContext):
             )
             applicants = await session.execute(stmt)
             return applicants.scalars().all()
+
+    async def get_applicant_by_full_name(
+            self,
+            full_name: str
+    ) -> Applicant | None:
+        async with self.session() as session:
+            stmt = (
+                select(Applicant)
+                .options(joinedload(Applicant.school))
+                .where(Applicant.full_name == full_name)
+            )
+            applicant = await session.execute(stmt)
+            return applicant.scalar_one_or_none()
+
+
+applicant_service = ApplicantService()

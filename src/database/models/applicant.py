@@ -27,7 +27,7 @@ class Applicant(SchoolRelationMixin, Base):
     directions: Mapped[list["Direction"]] = relationship(back_populates="applicant")
 
     def __str__(self) -> str:
-        return f"{self.__class__.__name__}(id={self.id}, full_name={self.full_name}, score={self.score}"
+        return f"{self.__class__.__name__}(id={self.id}, full_name={self.full_name}, score={self.score})"
 
     def __repr__(self) -> str:
         return str(self)

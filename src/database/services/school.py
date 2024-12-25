@@ -80,3 +80,6 @@ class SchoolService(DBContext):
 
 
 school_service = SchoolService()
+
+import asyncio
+print(asyncio.run(school_service.get_school(37743)))
