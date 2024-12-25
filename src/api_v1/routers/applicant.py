@@ -15,7 +15,7 @@ applicant_router = APIRouter(
 
 
 @applicant_router.get(path="/{applicant_id}/", response_model=ApplicantResponse)
-async def get_applicant_by_id(applicant_id) -> JSONResponse:
+async def get_applicant_by_id(applicant_id: int) -> JSONResponse:
     applicant = await applicant_service.get_applicant(applicant_id)
     if applicant is None:
         raise HTTPException(

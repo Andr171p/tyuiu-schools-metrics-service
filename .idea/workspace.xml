@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1">
-      <change beforePath="$PROJECT_DIR$/src/api_v1/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/__init__.py" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1 add get query">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -574,13 +574,34 @@
       <option name="project" value="LOCAL" />
       <updated>1735088154657</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 init applicant router">
+      <option name="closed" value="true" />
+      <created>1735088328232</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1735088328232</updated>
+    </task>
+    <task id="LOCAL-00048" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 fix syntax error">
+      <option name="closed" value="true" />
+      <created>1735088514880</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1735088514880</updated>
+    </task>
+    <task id="LOCAL-00049" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 add get query">
+      <option name="closed" value="true" />
+      <created>1735089073363</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1735089073363</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 new db" />
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 fix schema" />
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 update schemas" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 new alembic" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 fix router" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 fix errors in routers" />
@@ -603,6 +624,9 @@
     <MESSAGE value="[schools-metrics-service] 25.12.2024 add applicant router" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 add applicant methods" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 init applicant router" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix syntax error" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 add get query" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1 add get query" />
   </component>
 </project>
