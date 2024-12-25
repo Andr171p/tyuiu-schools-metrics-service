@@ -8,9 +8,9 @@ class ApplicantSchema(BaseModel):
     id: int
     full_name: str
     gender: str
-    bdate: datetime
+    bdate: str
     gpa: float
-    score: float
+    score: int
     olympiads: str | None
 
     class Config:
