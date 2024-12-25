@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1 fix response">
-      <change afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/encoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/funcs.py" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1 add datetime json encoder +">
       <change beforePath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/applicant.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,22 +205,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733749588252</updated>
-    </task>
-    <task id="LOCAL-00003" summary="[schools-metrics-service] 10.12.2024 db models + migrations">
-      <option name="closed" value="true" />
-      <created>1733775212237</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1733775212237</updated>
-    </task>
-    <task id="LOCAL-00004" summary="[schools-metrics-service] 10.12.2024 db update models">
-      <option name="closed" value="true" />
-      <created>1733826691406</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1733826691406</updated>
     </task>
     <task id="LOCAL-00005" summary="[schools-metrics-service] 10.12.2024 db add school service">
       <option name="closed" value="true" />
@@ -601,12 +582,26 @@
       <option name="project" value="LOCAL" />
       <updated>1735089605996</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 add datetime json encoder">
+      <option name="closed" value="true" />
+      <created>1735090472985</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1735090472985</updated>
+    </task>
+    <task id="LOCAL-00053" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 add datetime json encoder +">
+      <option name="closed" value="true" />
+      <created>1735090652669</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1735090652669</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 fix errors in routers" />
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 add config to school schema" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 add json encoders" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 +" />
     <MESSAGE value="[schools-metrics-service] 16.12.2024 elasticsearch" />
@@ -630,6 +625,8 @@
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 add get query" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 fiw typing error" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix response" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix response" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 add datetime json encoder" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 add datetime json encoder +" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1 add datetime json encoder +" />
   </component>
 </project>
