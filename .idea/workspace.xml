@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 add new http method">
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 add applicant router">
+      <change afterPath="$PROJECT_DIR$/src/api_v1/schemas/direction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analytics/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics/schemas/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analytics/schemas/schools.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics/schemas/schools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analytics/schools.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics/schools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/school.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/models/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/models/direction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/direction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/services/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/services/applicant.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +72,7 @@
       <recent name="C:\Users\andre\SchoolsMetricsService\src\metrics\info" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.schools">
+  <component name="RunManager" selected="Python.applicant">
     <configuration name="analytics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
@@ -98,7 +95,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="applicant" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,11 +104,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/api_v1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database/services" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/api_v1/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/services/applicant.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.schools" />
+        <item itemvalue="Python.applicant" />
         <item itemvalue="Python.school" />
+        <item itemvalue="Python.schools" />
         <item itemvalue="Python.analytics" />
         <item itemvalue="Python.direction" />
-        <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
   </component>
@@ -548,12 +545,26 @@
       <option name="project" value="LOCAL" />
       <updated>1735081384629</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="[schools-metrics-service] 25.12.2024 update school routes">
+      <option name="closed" value="true" />
+      <created>1735084707866</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1735084707866</updated>
+    </task>
+    <task id="LOCAL-00044" summary="[schools-metrics-service] 25.12.2024 add applicant router">
+      <option name="closed" value="true" />
+      <created>1735086733976</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1735086733976</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 15.12.2024" />
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 speed up metrics" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 production v1" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 production fix requirements" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 new db" />
@@ -577,6 +588,8 @@
     <MESSAGE value="[schools-metrics-service] 25.12.2024 fix school router" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 fix response" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 add new http method" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 add new http method" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 update school routes" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 add applicant router" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 add applicant router" />
   </component>
 </project>

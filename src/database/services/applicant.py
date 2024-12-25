@@ -1,7 +1,7 @@
 from typing import Sequence, List, Optional
 
 from sqlalchemy import select
-from sqlalchemy.orm import joinedload
+from sqlalchemy.orm import joinedload, selectinload
 
 from src.database.context import DBContext
 from src.database.models.school import School
@@ -66,5 +66,21 @@ class ApplicantService(DBContext):
             applicant = await session.execute(stmt)
             return applicant.scalar_one_or_none()
 
+    async def get_applicant_with_directions(self, id: int) -> Applicant:
+        async with self.session() as session:
+            stmt = (
+                select(Applicant)
+                .options(selectinload(Applicant.directions))
+                .where(Applicant.id == id)
+            )
+            applicant = await session.execute(stmt)
+            return applicant.scalar_one_or_none()
+
 
 applicant_service = ApplicantService()
+
+import asyncio
+a = asyncio.run(applicant_service.get_applicant_with_directions(5))
+d = a.directions
+for i in d:
+    print(i)
