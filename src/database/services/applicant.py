@@ -78,9 +78,3 @@ class ApplicantService(DBContext):
 
 
 applicant_service = ApplicantService()
-
-import asyncio
-a = asyncio.run(applicant_service.get_applicant_with_directions(5))
-d = a.directions
-for i in d:
-    print(i)
