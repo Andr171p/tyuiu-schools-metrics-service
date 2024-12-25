@@ -18,7 +18,7 @@ class ApplicantSchema(BaseModel):
         from_attributes = True
         json_encoders = {}
 
-    @field_validator('bdate')
+    @field_validator('bdate', mode='before')
     def validate_bdate(cls, value: datetime | str) -> str:
         if isinstance(value, datetime):
             return value.isoformat()
