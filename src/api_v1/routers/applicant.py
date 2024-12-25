@@ -27,7 +27,7 @@ async def get_applicant_by_id(applicant_id: int) -> JSONResponse:
         content={
             "data": {
                 "status": "ok",
-                "applicant": ApplicantSchema(**applicant.__dict__)
+                "applicant": ApplicantSchema(**applicant.__dict__).model_dump()
             }
         }
     )
