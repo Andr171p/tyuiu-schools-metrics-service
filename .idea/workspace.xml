@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 add applicant router">
-      <change afterPath="$PROJECT_DIR$/src/api_v1/schemas/direction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/models/direction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/direction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/services/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/services/applicant.py" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1">
+      <change beforePath="$PROJECT_DIR$/src/api_v1/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -561,12 +558,26 @@
       <option name="project" value="LOCAL" />
       <updated>1735086733976</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="[schools-metrics-service] 25.12.2024 add applicant methods">
+      <option name="closed" value="true" />
+      <created>1735088022001</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1735088022001</updated>
+    </task>
+    <task id="LOCAL-00046" summary="[schools-metrics-service] 25.12.2024 production v1 1.1">
+      <option name="closed" value="true" />
+      <created>1735088154657</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1735088154657</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 production v1" />
-    <MESSAGE value="[schools-metrics-service] 15.12.2024 production fix requirements" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 new db" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 fix schema" />
     <MESSAGE value="[schools-metrics-service] 15.12.2024 update schemas" />
@@ -590,6 +601,8 @@
     <MESSAGE value="[schools-metrics-service] 25.12.2024 add new http method" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 update school routes" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 add applicant router" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 add applicant router" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 add applicant methods" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1" />
   </component>
 </project>

@@ -19,7 +19,7 @@ class ApplicantSchema(BaseModel):
         json_encoders = {}
 
 
-class ApplicantsContent:
+class ApplicantsContent(BaseModel):
     status: Literal["ok"] = "ok"
     applicants: List[ApplicantSchema]
 
