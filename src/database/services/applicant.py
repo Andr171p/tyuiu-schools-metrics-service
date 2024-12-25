@@ -41,6 +41,15 @@ class ApplicantService(DBContext):
             await session.commit()
             return applicants
 
+    async def get_applicant(self, id: int) -> Applicant | None:
+        async with self.session() as session:
+            stmt = (
+                select(Applicant)
+                .where(Applicant.id == id)
+            )
+            applicant = await session.execute(stmt)
+            return applicant.scalar_one_or_none()
+
     async def get_applicants_by_school_id(
             self,
             school_id: int

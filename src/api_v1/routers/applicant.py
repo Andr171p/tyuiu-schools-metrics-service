@@ -4,7 +4,7 @@ from fastapi.exceptions import HTTPException
 
 from src.config import settings
 from src.database.services.applicant import applicant_service
-from src.api_v1.schemas.applicant import ApplicantSchema, ApplicantsResponse
+from src.api_v1.schemas.applicant import ApplicantSchema, ApplicantResponse, ApplicantsResponse
 from src.api_v1.schemas.direction import DirectionSchema, DirectionsResponse
 
 
@@ -12,6 +12,25 @@ applicant_router = APIRouter(
     prefix=f"{settings.api.api_v1_prefix}/applicants",
     tags=["Applicants"]
 )
+
+
+@applicant_router.get(path="/{applicant_id}/", response_model=ApplicantResponse)
+async def get_applicant_by_id(applicant_id) -> JSONResponse:
+    applicant = await applicant_service.get_applicant(applicant_id)
+    if applicant is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Applicant with ID {applicant_id} not found"
+        )
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content={
+            "data": {
+                "status": "ok",
+                "applicant": ApplicantSchema(**applicant.__dict__)
+            }
+        }
+    )
 
 
 @applicant_router.get(path="/{applicant_id}/directions/", response_model=DirectionsResponse)
