@@ -32,6 +32,21 @@ async def get_all_schools() -> JSONResponse:
     )
 
 
+@school_router.get(path="/search/", response_model=schemas.SearchSchoolsResponse)
+async def search_schools(q: str = Query(...)) -> JSONResponse:
+    search_service = g.search_service
+    schools = await search_service.search(q)
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content={
+            "data": {
+                "status": "ok",
+                "schools": schools
+            }
+        }
+    )
+
+
 @school_router.get(path="/{school_id}/", response_model=schemas.GetSchoolResponse)
 async def get_school_by_id(school_id: int) -> JSONResponse:
     school = await school_service.get_school(school_id)
@@ -46,21 +61,6 @@ async def get_school_by_id(school_id: int) -> JSONResponse:
             "data": {
                 "status": "ok",
                 "school": SchoolSchema(**school.__dict__).model_dump()
-            }
-        }
-    )
-
-
-@school_router.get(path="/search/{q}/", response_model=schemas.SearchSchoolsResponse)
-async def search_schools(q: str = Query(...)) -> JSONResponse:
-    search_service = g.search_service
-    schools = await search_service.search(q)
-    return JSONResponse(
-        status_code=status.HTTP_200_OK,
-        content={
-            "data": {
-                "status": "ok",
-                "schools": schools
             }
         }
     )
