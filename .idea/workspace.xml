@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1 fix applicant schema +">
-      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/applicant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/schemas/applicant.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/schemas/applicant.py" afterDir="false" />
+    <list default="true" id="72773c95-dd2c-463b-8e4e-fcbaa8541456" name="Changes" comment="[schools-metrics-service] 25.12.2024 production v1 1.1 add field bdate validator before">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/school.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/school.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,33 +33,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__init__.executor": "Run",
-    "Python.analytics.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.applicant.executor": "Run",
-    "Python.base.executor": "Run",
-    "Python.client.executor": "Run",
-    "Python.direction.executor": "Run",
-    "Python.loader.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.metrics (1).executor": "Run",
-    "Python.metrics.executor": "Run",
-    "Python.note.executor": "Run",
-    "Python.options.executor": "Run",
-    "Python.school (1).executor": "Run",
-    "Python.school.executor": "Run",
-    "Python.schools.executor": "Run",
-    "Python.service.executor": "Run",
-    "Python.sotka.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/TyuiuMlApi",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analytics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.applicant.executor&quot;: &quot;Run&quot;,
+    &quot;Python.base.executor&quot;: &quot;Run&quot;,
+    &quot;Python.client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.direction.executor&quot;: &quot;Run&quot;,
+    &quot;Python.loader.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.metrics (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.metrics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.note.executor&quot;: &quot;Run&quot;,
+    &quot;Python.options.executor&quot;: &quot;Run&quot;,
+    &quot;Python.school (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.school.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schools.executor&quot;: &quot;Run&quot;,
+    &quot;Python.service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sotka.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/TyuiuMlApi&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\SchoolsMetricsService\data" />
@@ -69,7 +70,7 @@
       <recent name="C:\Users\andre\SchoolsMetricsService\src\metrics\info" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.applicant">
+  <component name="RunManager" selected="Python.test">
     <configuration name="analytics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SchoolsMetricsService" />
       <option name="ENV_FILES" value="" />
@@ -106,28 +107,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/services/applicant.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="direction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SchoolsMetricsService" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database/metrics" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/metrics/direction.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,13 +159,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SchoolsMetricsService" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.applicant" />
         <item itemvalue="Python.school" />
         <item itemvalue="Python.schools" />
         <item itemvalue="Python.analytics" />
-        <item itemvalue="Python.direction" />
       </list>
     </recent_temporary>
   </component>
@@ -205,22 +206,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733749588252</updated>
-    </task>
-    <task id="LOCAL-00007" summary="[schools-metrics-service] 10.12.2024 add new tables">
-      <option name="closed" value="true" />
-      <created>1733843512269</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1733843512269</updated>
-    </task>
-    <task id="LOCAL-00008" summary="[schools-metrics-service] 10.12.2024 new migration">
-      <option name="closed" value="true" />
-      <created>1733843902854</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1733843902854</updated>
     </task>
     <task id="LOCAL-00009" summary="[schools-metrics-service] 11.12.2024">
       <option name="closed" value="true" />
@@ -598,12 +583,26 @@
       <option name="project" value="LOCAL" />
       <updated>1735091084766</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 add field bdate validator">
+      <option name="closed" value="true" />
+      <created>1735091501868</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1735091501868</updated>
+    </task>
+    <task id="LOCAL-00057" summary="[schools-metrics-service] 25.12.2024 production v1 1.1 add field bdate validator before">
+      <option name="closed" value="true" />
+      <created>1735091663253</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1735091663253</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[schools-metrics-service] 16.12.2024 elasticsearch" />
-    <MESSAGE value="[schools-metrics-service] 16.12.2024 add schools search system" />
     <MESSAGE value="[schools-metrics-service] 16.12.2024 add global middleware" />
     <MESSAGE value="[schools-metrics-service] 16.12.2024 production v1 + search sys" />
     <MESSAGE value="[schools-metrics-service] 16.12.2024 production v1 fix reqs" />
@@ -627,6 +626,8 @@
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 add datetime json encoder +" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix applicant schema" />
     <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix applicant schema +" />
-    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1 fix applicant schema +" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 add field bdate validator" />
+    <MESSAGE value="[schools-metrics-service] 25.12.2024 production v1 1.1 add field bdate validator before" />
+    <option name="LAST_COMMIT_MESSAGE" value="[schools-metrics-service] 25.12.2024 production v1 1.1 add field bdate validator before" />
   </component>
 </project>

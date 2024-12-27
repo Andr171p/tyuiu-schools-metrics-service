@@ -106,3 +106,7 @@ async def main() -> None:
 
 
 asyncio.run(main())'''
+
+
+# df = pd.read_csv(r'C:\Users\andre\SchoolsMetricsService\data\directions 2019-2024.csv')
+# print(df['Направление подготовки'].value_counts())
