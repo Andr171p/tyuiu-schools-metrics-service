@@ -51,7 +51,7 @@ async def get_school_by_id(school_id: int) -> JSONResponse:
     )
 
 
-@school_router.get(path="/search/?query=%q/", response_model=schemas.SearchSchoolsResponse)
+@school_router.get(path="/search/{q}/", response_model=schemas.SearchSchoolsResponse)
 async def search_schools(q: str = Query(...)) -> JSONResponse:
     search_service = g.search_service
     schools = await search_service.search(q)
